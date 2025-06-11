@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '블랙 기업 테스트',
-  description: '우리 회사의 블랙 지수는 얼마나 높을까?',
+  title: 'Black Level Test',
+  description: 'How high is your black level?',
 };
 
 export default function RootLayout({

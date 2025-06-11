@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <h1>블랙 기업 테스트</h1>
+      <h1>Black Level Test</h1>
     </main>
   );
 }
