@@ -1,4 +1,4 @@
-// 4. /src/features/test/questions.ts
+// src/features/test/questions.ts
 export const questions = [
   '월급이 3일 이상 밀린 적 있나요?',
   '수당 없이 야근한 적이 있나요?',

@@ -1,4 +1,4 @@
-// 5. /src/features/test/useTest.ts
+// /src/features/test/useTest.ts
 import { useState } from 'react';
 
 export function useTest(total: number) {

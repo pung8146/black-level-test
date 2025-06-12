@@ -1,4 +1,4 @@
-// 6. /src/features/test/TestPage.tsx
+// /src/features/test/TestPage.tsx
 'use client';
 
 import { questions } from './questions';
