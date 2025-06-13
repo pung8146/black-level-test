@@ -1,32 +1,25 @@
-// /src/features/test/TestPage.tsx
+// 8. /src/features/test/TestPage.tsx
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { questions } from './questions';
 import { useTest } from './useTest';
+import { useEffect } from 'react';
 
 export default function TestPage() {
-  const { score, currentIndex, answerYes, answerNo, isFinished, isDanger } =
-    useTest(questions.length);
+  const { score, currentIndex, answerYes, answerNo, isFinished } = useTest(
+    questions.length
+  );
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isFinished) {
+      router.push(`/result?score=${score}`);
+    }
+  }, [isFinished, score, router]);
 
   if (isFinished) {
-    return (
-      <div className="flex flex-col items-center justify-center h-screen p-8">
-        <h2 className="text-2xl font-semibold mb-4">진단 완료!</h2>
-        <p className="mb-2">
-          총 {questions.length}문항 중 {score}문항에 &apos;예&apos;라고
-          답하셨습니다.
-        </p>
-        <p
-          className={
-            isDanger ? 'text-red-600 font-bold' : 'text-green-600 font-bold'
-          }
-        >
-          {isDanger
-            ? '블랙기업 위험군입니다. 주의하세요!'
-            : '양호한 환경입니다.'}
-        </p>
-      </div>
-    );
+    return null;
   }
 
   return (
