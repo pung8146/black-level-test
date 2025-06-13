@@ -1,4 +1,3 @@
-// /src/features/test/useTest.ts
 import { useState } from 'react';
 
 export function useTest(total: number) {
